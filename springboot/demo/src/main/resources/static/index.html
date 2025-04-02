@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quản Lý Khám Chữa Bệnh</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h1>Quản lý khám chữa bệnh</h1>
+      <button onclick="showTab('quan-ly-bac-si')">Quản Lý Bác Sĩ</button>
+      <button onclick="showTab('quan-ly-y-ta')">Quản Lý Y Tá</button>
+      <button onclick="showTab('quan-ly-benh-nhan')">Quản Lý Bệnh Nhân</button>
+      <button onclick="showTab('quan-ly-thong-tin-benh')">
+        Quản Lý Thông Tin Bệnh
+      </button>
+      <button onclick="showTab('quan-ly-kham-benh')">Quản Lý Khám Bệnh</button>
+      <button onclick="showTab('quan-ly-benh-an')">Quản Lý Bệnh Án</button>
+      <button onclick="showTab('quan-ly-toa-thuoc')">Quản Lý Toa Thuốc</button>
+      <button onclick="showTab('quan-ly-dich-vu')">Quản Lý Dịch Vụ</button>
+      <button onclick="showTab('quan-ly-hoa-don')">Quản Lý Hóa Đơn</button>
+    </div>
+
+    <div class="content" id="content">
+      <!-- Nội dung mặc định -->
+      <h1>Quản Lý Khám Chữa Bệnh</h1>
+      <p>Chọn một tab để xem thông tin chi tiết.</p>
+    </div>
+
+    <!-- Nội dung quản lý bệnh nhân -->
+    <div id="quan-ly-benh-nhan" style="display: none">
+      <h1>Quản lý bệnh nhân</h1>
+      <form id="formThemBenhNhan">
+        <input type="text" id="id" placeholder="ID bệnh nhân" required />
+        <input type="text" id="ten" placeholder="Tên bệnh nhân" required />
+        <input type="text" id="gioi" placeholder="Giới tính" required />
+        <input type="text" id="dia_chi" placeholder="Địa chỉ" required />
+        <input type="date" id="ngay_sinh" required />
+        <input type="text" id="bhyt" placeholder="BHYT" />
+        <button id="btnAdd" type="submit">Thêm bệnh nhân</button>
+      </form>
+
+      <h2>Danh sách bệnh nhân</h2>
+      <table id="danhSachBenhNhan">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Tên</th>
+            <th>Giới tính</th>
+            <th>Địa chỉ</th>
+            <th>Ngày sinh</th>
+            <th>BHYT</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Danh sách bệnh nhân sẽ được thêm vào đây bằng JavaScript -->
+        </tbody>
+      </table>
+      <div class="actions">
+        <button id="btnChinhSua">Chỉnh sửa</button>
+        <button id="btnXoa" class="delete">Xóa</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
